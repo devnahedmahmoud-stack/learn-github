@@ -1,0 +1,14 @@
+
+.brand-color
+{
+    background-color: rgba(0, 128, 128, 0.719);
+    color: white;
+    cursor: pointer;
+}
+.service-content-header 
+{
+    font-weight: 700;
+    font-size: 17px;
+    padding-block:20px ;
+    color: #000;
+}

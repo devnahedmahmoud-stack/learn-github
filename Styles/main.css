@@ -1,0 +1,1955 @@
+@import url(../Styles/common.css);
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    margin-inline: 1em;
+
+}
+
+.section1 {
+    /*height: 80vh;*/
+    width: 100%;
+    margin-bottom: 5em;
+    /*background: linear-gradient(0, rgba(0, 128, 128, 0.016));*/
+    /*position: relative;*/
+
+}
+
+.header {}
+
+.header-items {
+    height: 4em;
+    width: 100%;
+    display: flex;
+    gap: 6em;
+    align-items: center;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.header-title h1 {
+    padding-left: 6em;
+    cursor: pointer;
+}
+
+.header-links {
+    text-transform: capitalize;
+    display: flex;
+    gap: 2em;
+
+}
+
+.header-links a {
+    text-decoration: none;
+    color: #000000b9;
+    font-weight: 400;
+}
+
+.header-links a:hover {
+    color: teal;
+}
+
+.morepages,
+.dropdown {
+    display: flex;
+    gap: 2px;
+    align-items: center;
+}
+
+.morepages-list {
+    visibility: hidden;
+}
+
+
+.header-items span,
+.header-links a.active {
+    color: teal;
+}
+
+.header-appointment button {
+    padding-block: 0.5em;
+    padding-inline: 1.25em;
+    border-radius: 5px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.header-appointment button:hover {
+    background-color: #099aa7b7;
+}
+
+.healthcare {
+
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    margin-block: 6em;
+    padding-left: 6em;
+    padding-bottom: 4em;
+    position: relative;
+    background: linear-gradient(to right, rgba(0, 128, 128, 0.073), transparent);
+
+}
+
+.healthcare-head {
+    display: flex;
+
+
+}
+
+.healthcare-title {
+    width: fit-content;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 2.5em;
+    padding: 0.5em;
+    border-radius: 1.25em;
+    font-weight: 600;
+    position: absolute;
+    top: 0px;
+    left: 47%;
+
+}
+
+.healthcare-title.brand-color {
+    cursor: default;
+}
+
+.healthcare-items {
+    display: flex;
+    gap: 3em;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6em;
+
+}
+
+.healthcare-items-image {
+    width: 40%;
+    height: 55%;
+    position: relative;
+}
+
+.healthcare-items-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2em;
+    box-shadow: -0.5em 0.5em 2em rgba(0, 128, 128, 0.201);
+    transform: rotate(-3deg);
+    transition: 0.5s;
+}
+
+.healthcare-items-image img:hover {
+    transform: rotate(0deg);
+}
+
+.healthcare-call {
+    background: #fff;
+    display: flex;
+    gap: 0.5em;
+    border: 1px solid rgba(0, 128, 128, 0.219);
+    border-radius: 0.5em;
+    position: absolute;
+    top: 1em;
+    left: -2em;
+    margin: 0.5em;
+    padding: 0.5em;
+    z-index: 1;
+    align-items: center;
+    
+}
+
+.healthcare-call div.icon-image,
+div.emergency {
+     
+}
+
+
+.emergency {
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.emergency span {
+    font-size: 1em;
+    color: #ccc;
+}
+
+.treated-patient-no {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
+
+.treated-rates {
+    display: flex;
+    gap: 1em;
+    border: 1px solid rgba(0, 128, 128, 0.219);
+    border-radius: 0.5em;
+    margin: 0.5em;
+    padding: 0.5em;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    position: absolute;
+    bottom: 2em;
+    right: -2em;
+    z-index: 1;
+}
+
+.treated-no {
+    color: teal;
+    font-size: 1.5em;
+    font-weight: 700;
+
+}
+
+.treated-patient {
+    font-size: 0.8em;
+    color: #00000063;
+    font-weight: 600;
+    padding-block: 0.5em 0.5em;
+}
+
+.healthcare-items-history {
+    width: 50%;   
+}
+
+.history-content-title {
+    font-size: 2em;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-block: 0.5em;
+}
+
+.history-content,
+.icon-desc span {
+    font-size: 1.25em;
+    color: #0000008d;
+}
+
+.history-content-icons {
+    margin-top: 3em;
+    display: flex;
+    gap: 1.25em;
+
+}
+
+.history-content-icon {
+    display: flex;
+    gap: 0.5em;
+}
+
+.icon-desc {
+    font-weight: 700;
+}
+
+.icon-desc span {
+    font-size: 0.9em;
+    text-transform: capitalize;
+}
+
+.icon-image {
+    width: 4em;
+    height: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1em;
+    border: 1px solid #ccc;
+    background: rgba(0, 128, 128, 0.19);
+    color: teal;
+    flex-shrink: 0;
+}
+
+.history-content-buttons {
+    margin-top: 3em;
+    display: flex;
+    gap: 2em;
+}
+
+.history-content-buttons button {
+    text-transform: capitalize;
+    padding: 1em;
+    font-size: 1em;
+    font-weight: 500;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+
+.watch-video button.watch {
+    transition: 0.5s;
+}
+
+.watch-video button.watch:hover {
+    background-color: teal;
+    color: #fff;
+}
+
+.schedule {
+    border: none;
+    transition: 1s;
+}
+
+.schedule:hover {
+    position: relative;
+    top: -1px;
+    box-shadow: -0.5em 0.5em 2em rgba(0, 128, 128, 0.755);
+}
+
+.watch-video {
+    display: flex;
+
+}
+
+.watch {
+    background: white;
+    border: 1px solid #ccc;
+    width: 12.5em;
+
+}
+
+.healthcare-links {
+    margin-top: 2.5em;
+    display: flex;
+    gap: 2em;
+    text-transform: capitalize;
+}
+
+.healthcare-links a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+}
+
+.link-image {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    color: teal;
+    transition: 3s;
+}
+
+.link-image:hover {
+    position: relative;
+    left: 5px;
+}
+
+.link-image:hover a {
+    color: teal;
+}
+
+.watch-video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+.watch-video-icon {
+    position: absolute;
+    top: 1em;
+    left: 0.5em;
+}
+
+.desc,
+.featured-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3em;
+}
+
+.featured-desc h2 {
+    position: relative;
+    margin-bottom: 0.5em;
+}
+
+.featured-desc h2::before {
+    content: "";
+    background-color: #ccc;
+    width: 4.5em;
+    height: 2px;
+    position: absolute;
+    bottom: -1em;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.featured-desc h2::after {
+    content: "";
+    background-color: teal;
+    width: 2em;
+    height: 3px;
+    position: absolute;
+    bottom: -1em;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.desc h2 {
+    font-size: 3em;
+    font-weight: 400;
+    color: teal;
+
+}
+
+.explain {
+    width: 40%;
+    font-size: 1.5em;
+    color: #0000005a;
+    text-align: center;
+}
+
+.featured-desc h2,
+.featuredservices-title h2 {
+
+    font-size: 2em;
+    font-weight: 500;
+}
+
+.featured-content {
+    width: 100%;
+    display: flex;
+    gap: 3em;
+    padding-inline: 6em;
+
+}
+
+.featured-content-desc,
+.featured-content-image {
+    width: 50%;
+}
+
+.featured-content-image {
+    border-radius: 0.5em;
+    overflow: hidden;
+    position: relative;
+}
+
+.featured-content-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 1s;
+}
+
+.featured-content-image:hover img {
+    transform: scale(1.1);
+}
+
+.featured-content-image::before {
+    content: "";
+    width: 90%;
+    height: 90%;
+    border: 1px solid teal;
+    border-radius: 0.5em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.emergencymed {
+    color: teal;
+    text-transform: uppercase;
+}
+
+.careservice span {
+    font-size: 3.5em;
+    font-weight: 400;
+}
+
+.careservice p,
+.alldepartments-desc-view p {
+    margin-block: 1.25em;
+    font-size: 1.25em;
+    color: #000000a1;
+}
+
+.featured-content-desc li,
+.ex-health-content li {
+    display: inline;
+}
+
+.response-icon {
+    display: flex;
+    gap: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.response-icon-image {
+    color: rgba(0, 128, 128, 0.877);
+
+}
+
+.learnmore-arrow,
+.service-learnmore-arrow {
+    display: flex;
+    gap: 0.5em;
+    margin-top: 2em;
+    cursor: pointer;
+    width: fit-content;
+
+}
+
+.featured-content-desc div.learnmore-arrow:hover div.arrow {
+    color: teal;
+    transform: translateX(3px);
+}
+
+.featured-content-desc div.learnmore-arrow:hover a {
+    color: teal;
+}
+
+.service-learnmore-arrow:hover div.arrow,
+.service-learnmore-arrow:hover a {
+    color: #000;
+}
+
+.service-learnmore-arrow:hover div.arrow {
+    transform: translateX(3px);
+}
+
+.service-image-content {
+    transition: 0.5s;
+}
+
+.service-image-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 2em rgba(0, 0, 0, 0.3);
+}
+
+.service-image-content div.service-image {
+    transition: 0.5s;
+}
+
+.service-image-content:hover div.service-image {
+    transform: scale(1.1);
+}
+
+.learnmore-arrow a,
+.service-learnmore-arrow a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+}
+
+.service-learnmore-arrow a,
+.service-learnmore-arrow div.arrow,
+.health-care-button-link a,
+.health-care-button-link div.arrow {
+    color: rgba(0, 128, 128, 0.719);
+}
+
+.alldepartments {
+
+    width: 80%;
+    margin-bottom: 5em;
+    background: linear-gradient(0, rgba(0, 128, 128, 0.016));
+    margin-inline: auto;
+    padding-bottom: 0.5em;
+
+}
+
+.alldepartments-desc-view,
+.alldepartments-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25em;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.alldepartments-desc {
+    width: 50%;
+    padding-top: 3em;
+}
+
+.alldepartments-desc-view span {
+    font-size: 2em;
+}
+
+.alldepartments-desc-view p {
+    text-align: center;
+}
+
+.alldepartments-desc-view button {
+    font-size: 1.25em;
+    font-weight: 500;
+    padding-block: 1.25em;
+    padding-inline: 2em;
+    border: none;
+    margin-bottom: 0.5em;
+}
+
+.alldepartments-desc-view button {
+    transition: 0.5s;
+}
+
+.alldepartments-desc-view button:hover {
+    background-color: #fff;
+    color: teal;
+    border: 1px solid teal;
+    transform: translateY(-2px);
+}
+
+.featuredservices-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+}
+
+.featuredservices-title h2,
+.find-doctor-title h3 {
+    position: relative;
+    margin-bottom: 0.5em;
+}
+
+.featuredservices-title p {
+    margin-bottom: 1.5em;
+}
+
+.featuredservices-title h2::before,
+.find-doctor-title h3::before {
+    content: "";
+    background-color: #ccc;
+    width: 4.5em;
+    height: 2px;
+    position: absolute;
+    bottom: -1em;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.featuredservices-title h2::after,
+.find-doctor-title h3::after {
+    content: "";
+    background-color: teal;
+    width: 2em;
+    height: 3px;
+    position: absolute;
+    bottom: -1em;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.featuredservices {}
+
+.featuredservices-services {
+    display: flex;
+    gap: 1.25em;
+    flex-wrap: wrap;
+    margin-inline: 4.5em;
+}
+
+.service-image-content {
+    margin-block: 1.25em;
+    width: 31%;
+    height: 40%;
+    border: 1px solid #ccc;
+    border-radius: 0.5em;
+    overflow: hidden;
+    box-shadow: 0px 0px 1.25em rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.service-image {
+    height: 30vh;
+    position: relative;
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.service-content {
+    padding-inline: 1.25em;
+}
+
+.service-gradiant {
+    width: 100%;
+    height: 2.5em;
+    background: linear-gradient(to top, #fff, transparent);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.service-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    color: #fff;
+    background-color: teal;
+    position: absolute;
+    top: 1.25em;
+    right: 1.25em;
+    z-index: 1;
+
+}
+
+.find-doctor {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.find-doctor-title {
+    width: 100%;
+    display: flex;
+    gap: 1.25em;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1em;
+}
+
+.find-doctor-filter {
+    width: 100%;
+}
+
+.find-doctor-filter form {
+    width: 70%;
+    border: 1px solid #ccc;
+    border-radius: 0.5em;
+    background-color: white;
+    margin-inline: auto;
+    display: flex;
+    gap: 1.25em;
+    padding: 1.25em;
+
+    font-size: 1em;
+    font-weight: 500;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0.5em 0.5em 0.5em #cccccc37;
+}
+
+.find-doctor-filter input,
+select {
+    width: 16.5em;
+    height: 3em;
+    border: 2px solid #ccc;
+    border-radius: 0.5em;
+
+}
+
+.find-doctor-filter button {
+
+    border-radius: 0.5em;
+    border: 0;
+    color: #fff;
+    background-color: teal;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    position: absolute;
+    bottom: 1.25em;
+    right: 5px;
+}
+
+label {
+    display: block;
+}
+
+.ex-health-images-content {
+    background: linear-gradient(0, rgba(0, 128, 128, 0.016));
+
+    display: flex;
+    margin-bottom: 6em;
+    padding-block: 5em;
+    justify-content: center;
+    align-items: center;
+}
+
+.ex-health-images {
+    width: 60%;
+
+    margin-inline: 1em;
+    display: flex;
+    gap: 1.25em;
+
+}
+
+.ex-health-content {
+    width: 30%;
+
+}
+
+.ex-health-images-part1 {
+    width: 70%;
+
+
+    border-radius: 0.5em;
+    overflow: hidden;
+    position: relative;
+}
+
+.ex-health-images-part1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 1s;
+}
+
+.ex-health-images-part1 img:hover {
+    transform: scale(1.2);
+}
+
+.ex-health-images-part2 {
+    width: 30%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.25em;
+}
+
+.ex-health-images-part2-img1,
+.ex-health-images-part2-img2 {
+    height: 100%;
+    border-radius: 0.5em;
+    overflow: hidden;
+}
+
+.ex-health-images-part2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 1s;
+}
+
+.ex-health-images-part2 img:hover {
+    transform: scale(1.2);
+}
+
+.jci-icon {
+    border: 1px solid #ccc;
+    background-color: white;
+    padding: 1em;
+    border-radius: 3em;
+    display: flex;
+    gap: 0.5em;
+    position: absolute;
+    top: 1.25em;
+    left: 1.25em;
+    z-index: 1;
+}
+
+.ex-health-icon,
+.health-care-dept-icon {
+    color: teal;
+    height: 0.5em;
+}
+
+.section1.ex-health {
+    width: 100%;
+
+}
+
+.ex-health-content1 {
+    background-color: white;
+    box-shadow: -5px 0px teal;
+    border: 1px solid #cccccc1e;
+    border-radius: 0.5em;
+    padding: 1.25em;
+    display: flex;
+    gap: 0.5em;
+
+
+
+}
+
+.ex-health-content1 div.ex-health-icon,
+.department div.ex-health-icon,
+.health-care-dept-icon {
+    width: 4em;
+    height: 4em;
+    background-color: rgba(0, 128, 128, 0.079);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 0.5em;
+
+}
+
+.departments {
+    margin-left: 6em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25em;
+}
+
+.department {
+    width: 30%;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    flex-wrap: wrap;
+    justify-content: left;
+    justify-items: left;
+    transition: 0.5s;
+    position: relative;
+}
+
+.departments div.department::before {
+    content: "";
+    width: 0;
+    height: 2px;
+    background: linear-gradient(to right, teal, transparent);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 1s;
+}
+
+.departments div.department:hover {
+    box-shadow: 0 0 2em rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.departments div.department:hover::before {
+    width: 100%;
+}
+
+.department div.ex-health-icon {
+    transition: 0.5s;
+}
+
+.departments div.department:hover div.ex-health-icon {
+    transform: scale(1.2);
+}
+
+.department h3 {
+    margin-bottom: 0.5em;
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+.department p {
+    color: #0000008d;
+
+}
+
+.department div.ex-health-icon,
+.health-care-dept-icon {
+    border-radius: 50%;
+}
+
+.ex-health-desc {
+    width: fit-content;
+}
+
+.ex-health-desc h3 {
+    margin-bottom: 0.5em;
+
+}
+
+.ex-health-content2 {
+    margin-top: 4em;
+}
+
+.ex-health-content3 {
+    display: flex;
+    gap: 1.25em;
+    width: 280px;
+    height: 6em;
+    justify-content: center;
+    align-items: center;
+}
+
+.ex-health-content3 div.treated-no {
+    font-size: 2em;
+    font-weight: 400;
+}
+
+.department div.ex-health-content3 {
+    justify-content: left;
+
+}
+
+.department div.treated-patient {
+    text-transform: uppercase;
+}
+
+.ex-health-content3 div.treated-no {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+
+.ex-health-content4 {
+    display: flex;
+    gap: 1.25em;
+    margin-top: 3em;
+}
+
+.ex-health-content4 button,
+.health-care-button-link button {
+    height: 4em;
+    padding: 1.25em;
+    font-size: 1em;
+    font-weight: 600;
+    border-radius: 0.5em;
+
+}
+
+.ex-health-content4 button {}
+
+.ex-health-content4 button.brand-color,
+.health-care-button-link button {
+    border: 0;
+    width: fit-content;
+}
+
+.ex-health-content4 button.brand-color:hover {
+    box-shadow: -0.5em 0.5em 1.25em rgba(0, 128, 128, 0.319);
+    position: relative;
+    top: -1px;
+}
+
+.sh-consult-call {
+    position: relative;
+}
+
+.sh-consult {
+
+    text-align: right;
+    border: 2px solid #ccc;
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    gap: 0.5em;
+
+}
+
+.sh-consult svg {
+    color: teal;
+}
+
+.sh-consult:hover {
+    border: 2px solid teal;
+    color: teal;
+    position: relative;
+    top: -1px;
+}
+
+.ex-health-content4 div.icon-image {
+    border: 0;
+    height: 2.5em;
+    background-color: transparent;
+    position: absolute;
+    top: 0.5em;
+    left: 0.5em;
+    cursor: pointer;
+}
+
+.find-doctor-doctors {
+    width: 90%;
+    display: flex;
+    gap: 0.5em;
+    flex-wrap: wrap;
+    margin-left: 6em;
+
+
+}
+
+.dr-info {
+    width: 30%;
+    margin-left: 1.25em;
+    margin-top: 2em;
+    border-radius: 1.25em;
+    display: flex;
+    gap: 1.25em;
+}
+
+.dr-info:hover {
+    border: 1px solid rgba(0, 128, 128, 0.249);
+    box-shadow: 0px 0px 3em rgba(0, 0, 0, 0.1);
+}
+
+.dr-info div.dr {
+    width: 100%;
+    padding: 1.25em;
+    border-radius: 1.25em;
+}
+
+.dr-image {
+    width: 4em;
+    height: 4em;
+}
+
+.dr-image img {
+    width: 100%;
+    border-radius: 0.5em;
+    object-fit: cover;
+
+}
+
+.dr-info-image {
+    display: flex;
+    gap: 0.5em;
+    position: relative;
+
+}
+
+.dr-information span {
+    color: #00000063;
+
+}
+
+.md-facc {
+    font-size: 0.75em;
+    font-weight: 600;
+    width: fit-content;
+    padding-inline: 0.5em;
+    border-radius: 5px;
+    background-color: rgba(0, 128, 128, 0.19);
+    color: teal;
+    display: inline;
+
+}
+
+.years {
+    display: inline-block;
+    margin-top: 0.5em;
+}
+
+.evaluation {
+    margin-top: 1em;
+    display: flex;
+    gap: 0.5em;
+
+    padding: 0;
+    margin-left: 0;
+
+}
+
+.evaluation span.evaluation-rate {
+    font-weight: bold;
+    color: #000;
+    margin-top: 0.5em;
+}
+
+.stars {
+    color: orange;
+    margin-top: 0.5em;
+}
+
+.dr-info-buttons {
+    margin-top: 2em;
+}
+
+.dr-info-buttons button.btn-consult {
+    width: 47%;
+    height: 2.5em;
+    font-size: 1em;
+    font-weight: 400;
+    border-radius: 0.5em;
+    border: 0;
+    cursor: pointer;
+    text-align: center;
+}
+
+.dr-info-buttons button.profile {
+    background-color: transparent;
+    border: 1px solid #ccc
+}
+
+.dr-info-buttons button.profile:hover {
+    background-color: #0000000c;
+}
+
+.dr-info-buttons button.brand-color {
+    transition: 0.5s;
+}
+
+.dr-info-buttons button.brand-color:hover {
+    transform: translateY(-1px);
+    background-color: teal;
+}
+
+.circle {
+    width: 1.3em;
+    height: 1.3em;
+
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 7px;
+    left: 3em;
+    background-color: white;
+}
+
+.green-circle {
+    width: 0.8em;
+    height: 0.8em;
+    border: 0;
+    border-radius: 50%;
+    background-color: rgba(0, 128, 0, 0.581);
+}
+
+.orange-circle {
+    background-color: orange;
+}
+
+.dr-info {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.dr-info.shadow {
+    border: 1px solid teal;
+    box-shadow: 1em 1em 1em rgba(0, 128, 128, 0.118);
+}
+
+.directory-button-icon {
+    margin-block: 3em;
+    display: flex;
+    justify-content: center;
+
+}
+
+.directory-button-icon button {
+    padding: 1em 2.5em;
+    background-color: transparent;
+    color: teal;
+    border: 2px solid teal;
+    border-radius: 0.5em;
+    font-size: 1em;
+    font-weight: 600;
+    position: relative;
+    cursor: pointer;
+
+}
+
+.directory-icon {
+    position: absolute;
+    top: 1.25em;
+    right: 1.25em;
+}
+
+.health-care {
+
+    padding: 6em;
+    background-color: #cccccc15;
+    position: relative;
+}
+
+.health-care-journey {
+    display: flex;
+    gap: 2em;
+    padding-bottom: 3em;
+}
+
+.health-care-journey-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    width: 50%;
+}
+
+.health-care-journey-content h2 {
+    font-size: 3em;
+    font-weight: 400;
+}
+
+.health-care-journey-content p {
+    font-size: 1em;
+    color: #000000a1;
+}
+
+
+.health-care-button-link {
+    display: flex;
+    gap: 2em;
+    width: fit-content;
+    align-items: center;
+
+}
+
+.health-care-button-link div.learnmore-arrow {
+    margin-top: 0;
+    display: flex;
+}
+
+.health-care-button-link:hover div.learnmore-arrow a,
+.health-care-button-link:hover div.learnmore-arrow div.arrow {
+    color: teal;
+}
+
+.health-care-button-link:hover div.learnmore-arrow div.arrow {
+    transform: translateX(3px);
+}
+
+.health-care-boxs {
+    width: 50%;
+    position: relative;
+
+}
+
+.health-care-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5em;
+    overflow: hidden;
+    position: absolute;
+    top: 1.25em;
+    left: 1.25em;
+}
+
+.health-care-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.health-care-box {
+    background-color: #cccccc4a;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5em;
+}
+
+.health-care-history {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5.5em;
+    margin-left: 3em;
+
+}
+
+.health-care-history div.health-care-rate {
+    display: inline-block;
+    color: teal;
+    text-align: center;
+    margin-block: 3em;
+
+}
+
+.health-care-history div.health-care-rate p {
+    font-size: 2em;
+    font-weight: 400;
+}
+
+.health-care-history div.health-care-rate span {
+    color: #0000005a;
+    font-size: 1em;
+    font-weight: 00;
+}
+
+.health-care-depts {
+    margin-block: 2em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25em;
+    padding: 0.5em;
+
+}
+
+.health-care-depts div.health-care-dept-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 0.5em;
+    padding: 2em;
+    padding-block: 3em;
+    background-color: #fff;
+}
+
+.health-care-depts div.health-care-dept-content span {
+    padding-block: 1.25em;
+    font-size: 1.5em;
+}
+
+.health-care-depts div.health-care-dept-content p {
+    text-align: center;
+    color: #0000007e;
+    padding-bottom: 1.25em;
+}
+
+.health-care-depts div.health-care-dept-content a {
+
+    text-decoration: none;
+    color: #099aa7;
+    font-weight: 600;
+}
+
+.health-care-depts div.health-care-dept-content {}
+
+.health-care-depts div.health-care-dept-content a:hover {
+    color: teal;
+}
+
+.health-care-depts div.health-care-dept-content:hover {
+    box-shadow: 0px 0px 2.5em rgba(0, 0, 0, 0.2);
+
+}
+
+.health-care-depts div.health-care-dept-content:hover div.health-care-dept-icon {
+    background-color: #099aa7;
+    color: #fff;
+}
+
+.health-care-assistance {
+    width: 100%;
+    border-radius: 0.5em;
+
+}
+
+.health-care-assistance {
+    display: flex;
+    gap: 2.5em;
+    align-items: center;
+    background-color: rgba(0, 128, 128, 0.719);
+    padding: 2em;
+    color: #fff;
+    font-size: 1em;
+}
+
+.health-care-assistance div.icon-image {
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 128, 128, 0.33);
+    color: #fff;
+    border: 0;
+
+}
+
+.health-care-assistance h4 {
+    font-size: 1.25em;
+    font-weight: 400;
+}
+
+.health-care-assistance p {
+    color: #ffffffd3
+}
+
+.health-care-assistance a {
+    color: #fff;
+    font-weight: 600;
+}
+
+.health-care-assistance-call {
+    position: relative;
+}
+
+.health-care-assistance-call button {
+    padding: 1em;
+    font-size: 1em;
+    font-weight: 500;
+    border-radius: 0.5em;
+    cursor: pointer;
+    border: 0;
+    padding-left: 3em;
+    transition: 0.6s;
+}
+
+.health-care-assistance-call button:hover {
+    transform: translatey(-3px);
+
+}
+
+.health-care-assistance-icon {
+    color: #000;
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    cursor: pointer;
+}
+
+.footer-links {
+    padding-inline: 7.5em;
+    padding-top: 3em;
+    display: flex;
+    gap: 0.5em;
+}
+
+.links {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    gap: 2em;
+
+}
+
+.medinest-contact {
+    width: 20%;
+    margin-right: 6em;
+}
+
+.footer-links ul {
+    margin-top: 0.5em;
+    width: 100%;
+
+}
+
+.medinest-contact ul {
+    margin-top: 2em;
+}
+
+.footer-links li {
+    list-style: none;
+    margin-bottom: 0.5em;
+}
+
+.footer-links a {
+    text-decoration: none;
+}
+
+.medinest-contact a {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #000;
+}
+
+.medinest-contact ul {
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.medinest-contact span {
+    font-weight: 500;
+}
+
+.useful-links a {
+    color: #0000007e;
+}
+
+.useful-links span {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.useful-links a:hover {
+    color: #099aa7;
+}
+
+.hr-end {
+    margin-inline: 6em;
+
+}
+
+.footer-social-icons {
+    display: flex;
+    gap: 0.5em;
+
+}
+
+.footer-social-icons div.image-icon {
+    margin-block: 1.25em;
+    width: 2.5em;
+    height: 2.5em;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0000009b;
+    cursor: pointer;
+}
+
+.footer-social-icons div.image-icon:hover {
+    border-color: #099aa7;
+    color: #099aa7;
+}
+
+.footer-social-icons div.image-icon:hover div.image-icon-box {
+    background-color: #099aa7;
+}
+
+.image-icon-box {
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    background-color: #0000009d;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyright-content {
+    margin-block: 1.25em;
+    font-size: 1em;
+    font-weight: 500;
+    text-align: center;
+    color: #000000ab;
+}
+
+.copyright-content span {
+
+    font-weight: bold;
+    color: #000;
+}
+
+.copyright-content span.designed {
+    display: inline-block;
+    margin-top: 0.5em;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.copyright-content a {
+    text-decoration: none;
+    color: #099aa7;
+}
+
+.copyright-content a:hover {
+    opacity: 0.8;
+}
+
+.find-doctor-filter form button,
+.directory-button-icon button,
+.health-care-button-link button {
+    transition: 0.6s;
+}
+
+.find-doctor-filter form button:hover,
+.directory-button-icon button:hover,
+.health-care-button-link button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 0px 1em rgba(0, 128, 128, 0.612);
+}
+
+.directory-button-icon button:hover {
+    background-color: teal;
+    color: #fff;
+}
+
+.totop {
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    background-color: #099aa7;
+    position: fixed;
+    bottom: 0.5em;
+    right: 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    cursor: pointer;
+}
+
+.totop:hover {
+    opacity: 0.8;
+}
+
+.more-menu {
+    width: 3em;
+    height: 150;
+    background-color: red;
+
+
+}
+
+.morepages {
+    position: relative;
+
+}
+
+.morepages ul {
+    width: 3em;
+    position: absolute;
+    transform: translateY(2px);
+    background-color: tomato;
+}
+
+.morepages:hover .more-menu {}
+
+.header-appointment div.menue {
+    width: 2.5em;
+    height: 2.5em;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    flex-shrink: 0;
+
+}
+
+@media (max-width:1024px) 
+{
+    .header-links {
+        display: none;
+    }
+
+    .header-items {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .header-appointment {
+        display: flex;
+    }
+
+    .header-appointment div.menue {
+        display: flex;
+    }
+
+    .ex-health-content4 {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25em;
+        margin-top: 3em;
+    }
+
+    .find-doctor-filter form {
+        width: 85%;
+    }
+
+    .dr-info {
+        width: 48%;
+        margin-left: 0;
+    }
+
+    .dr-info-image {
+
+        gap: 1.5em;
+    }
+
+    .ex-health-images-content {
+        align-items: normal;
+    }
+}
+
+
+@media (max-width:768px) 
+{
+    .healthcare-title
+    {
+        top: 52em;
+        left : 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+    }
+
+    .healthcare-items-image 
+    {
+        width: 100%;
+    }
+    .healthcare-items
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        margin-top: 0;
+    }
+    
+.history-content-icons {
+    
+    flex-direction: column;
+}
+.history-content-icons div.icon-desc
+{
+    text-align: center;
+}
+.healthcare-links {
+    flex-direction: column;
+    align-items: flex-start;
+}
+.history-content-title
+{
+    
+}
+    .healthcare-call,.treated-rates
+    {
+        position: static;
+        margin-top: 1em;
+    }
+    .header-links {
+        display: none;
+    }
+
+    .header-items {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .header-appointment {
+        display: flex;
+    }
+
+.healthcare-items-history {
+    width: 100%;
+}
+.desc h2
+{
+    font-size: 2.5em;
+}
+.desc div.explain
+{
+    width: 90%;
+}
+
+    .ex-health-images-content {
+      flex-direction: column;
+    }
+.ex-health-images {
+    width: 100%;
+flex-direction: column;
+margin-inline: 0;
+    }
+    
+.ex-health-images-part1
+{
+    width: 100%;
+}
+.ex-health-images-part2
+{
+    flex-direction: row;
+    width: 100%;
+}
+.ex-health-content
+{
+    justify-items: center;
+    margin-top: 3em;
+    width: 100%;
+}
+.ex-health-content1
+{
+    width: 90%;
+}
+.ex-health-content4
+{
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+.featured-content
+{
+    flex-direction: column;
+}
+
+.featured-content-desc, .featured-content-image,.alldepartments-desc
+{
+    width: 100%;
+}
+.departments
+{
+    margin-left: 2em;
+    
+}
+.department
+{
+    width :45%
+}
+.service-image-content
+{
+    width: 48%;
+}
+.find-doctor-filter form
+{
+    flex-direction: column;
+    
+}
+.find-doctor-filter div.search,div.speciality,div.locations,div.search input,select
+{
+    width: 100%;
+}
+.find-doctor-doctors
+{
+    margin-inline: auto;
+}
+    .dr-info {
+        width: 90%;
+        margin-inline: auto;
+    }
+.health-care
+{
+    padding: 2em;
+}
+.health-care-journey
+{
+    width: 100%;
+    flex-direction: column;
+}
+.health-care-boxs
+{
+    width: 100%;
+    height: 20em;
+}
+.health-care-journey-content
+{
+    width: 100%;
+}
+.health-care-journey-content h2
+    {
+        font-size: 2.1em;
+        
+    }
+   .health-care-journey-content p
+   {
+text-align: center;
+   } 
+   .health-care-history
+   {
+    grid-template-columns: repeat(2,2fr);
+    gap :0.5em;
+    margin-block: 2em;
+   }
+   .health-care-history div.health-care-rate
+   {
+    margin-block: 1em;
+    
+   }
+   .health-care-depts
+   {
+    grid-template-columns: repeat(2,2fr);
+   }
+   .health-care-assistance
+   {
+    flex-direction: column;
+    text-align: center;
+    gap :1em;
+   }
+   .find-doctor-filter button {
+    position: static;
+    width: 100%;
+   }
+   .footer-links
+    {
+     padding-inline:2em;   
+    }
+    .medinest-contact
+    {width:fit-content;}
+.links
+{
+    grid-template-columns: repeat(2,1fr);
+}
+}
