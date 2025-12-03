@@ -9,36 +9,50 @@
 </head>
 
 <body>
-    <header class="header">
-        <div class="header-items">
+    <header>
+        <div class="header-container">
+            <h1>Medi<span>Nest</span> </h1>
+            <ul class="header-links">
+                <li>
+                    <a href="" class="active">home</a>
+                </li>
+                <li><a href="">about</a></li>
+                <li><a href="">departments</a></li>
+                <li><a href="">services</a></li>
+                <li><a href="">doctors</a></li>
+                <li class="morepages"><a href="">more pages<svg xmlns="http://www.w3.org/2000/svg" width="17"
+                            height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M6 9l6 6l6 -6" />
+                        </svg></a>
+                    <ul class="morepages-links">
+                        <li><a href="">Departments</a></li>
+                        <li class="services"><a href="">Services</a>
+                            <ul class="services-list">
+                                <li><a href="">Service 1</a></li>
+                                <li><a href="">Service 2</a></li>
+                                <li><a href="">Service 3</a></li>
+                            </ul>
+                        </li>
 
-            <div class="header-title">
-                <h1>Medi<span>Nest</span>
-                </h1>
-            </div>
-            <div class="header-links">
-                <a href="" class="active">home</a>
-                <a href="">about</a>
-                <a href="">departments</a>
-                <a href="">services</a>
-                <a href="">doctors</a>
-                <a class="morepages" href="">more pages<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17"
-                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M6 9l6 6l6 -6" />
-                    </svg>
+                        <li><a href="">Appointment</a></li>
+                        <li><a href="">Terms</a></li>
+                        <li><a href="">Privacy</a></li>
+                        <li><a href="">Gallary</a></li>
 
-                </a>
-                <a class="dropdown" href="">dropdown<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17"
-                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M6 9l6 6l6 -6" />
-                    </svg>
-                </a>
-                <a href="">contact</a>
-            </div>
+                    </ul>
+                </li>
+                <li><a href="">dropdown<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M6 9l6 6l6 -6" />
+                        </svg></a></li>
+                <li><a href="">contact</a></li>
+            </ul>
             <div class="header-appointment">
                 <button class="brand-color" type="submit">Appointment</button>
                 <div class="menue">
@@ -52,17 +66,12 @@
                     </svg>
                 </div>
             </div>
-
         </div>
+
     </header>
     <main class="container">
         <section class="section1">
             <div class="healthcare">
-
-                <div class="healthcare-title brand-color">
-                    Trusted Healthcare Provider
-                </div>
-
                 <div class="healthcare-items">
                     <div class="healthcare-items-image">
                         <img src="./Public/Assets/Images/image1.png" alt="" loading="lazy">
@@ -94,6 +103,9 @@
                         </div>
                     </div>
                     <div class="healthcare-items-history">
+                        <div class="healthcare-title brand-color">
+                            Trusted Healthcare Provider
+                        </div>
                         <div class="history-content-title">
                             excellence in medical Care Since 1985
                         </div>
@@ -158,22 +170,18 @@
                         </div>
                         <div class="history-content-buttons">
                             <button class="brand-color schedule">schedule consultation</button>
-                            <div class="watch-video">
-                                <button class="watch">
-                                    <div class="watch-video-icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round"
-                                            class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube">
-                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                            <path
-                                                d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" />
-                                            <path d="M10 9l5 3l-5 3z" />
-                                        </svg>
-                                    </div>watch our story
-                                </button>
-                            </div>
-
+                            <button >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path
+                                        d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" />
+                                    <path d="M10 9l5 3l-5 3z" />
+                                </svg>
+                                watch our story
+                            </button>
                         </div>
                         <div class="healthcare-links">
                             <div class="link-image">
@@ -374,8 +382,9 @@
             <div class="featured-desc">
                 <h2>Featured Departments
                 </h2>
-                <div class="featured-explain">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
-                    consectetur velit</div>
+                <div class="featured-explain">
+                    <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
+                    consectetur velit</p></div>
             </div>
             <div class="featured-content">
                 <div class="featured-content-desc">
@@ -949,17 +958,17 @@
                             </select>
                         </div>
 
-                        
-                            <button><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-right">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                    <path d="M5 12l14 0" />
-                                    <path d="M15 16l4 -4" />
-                                    <path d="M15 8l4 4" />
-                                </svg></button>
-                        
+
+                        <button><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-right">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M5 12l14 0" />
+                                <path d="M15 16l4 -4" />
+                                <path d="M15 8l4 4" />
+                            </svg></button>
+
                     </form>
                 </div>
                 <div class="find-doctor-doctors">
@@ -1581,8 +1590,7 @@
                     </div>
                 </div>
             </div>
-            <div class="links">
-                <div class="useful-links">
+            <div class="useful-links">
                     <span>Useful Links</span>
                     <ul>
                         <li><a href="">Home</a></li>
@@ -1624,7 +1632,7 @@
                         <li><a href="">Graphic Design</a></li>
                     </ul>
                 </div>
-            </div>
+            
         </div>
         <hr class="hr-end">
         <div class="copyright-content">

@@ -9,35 +9,32 @@
 
 .container {
     margin-inline: 1em;
-
 }
 
 .section1 {
-    /*height: 80vh;*/
     width: 100%;
     margin-bottom: 5em;
-    /*background: linear-gradient(0, rgba(0, 128, 128, 0.016));*/
-    /*position: relative;*/
 
 }
 
-.header {}
-
-.header-items {
-    height: 4em;
-    width: 100%;
+.header-container{
+    
     display: flex;
-    gap: 6em;
+    justify-content: space-between;
     align-items: center;
+    padding-inline: 5em;
+    padding-top: 1em;
     background-color: #fff;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 10;
+    
+    width: 100%;
 }
 
 .header-title h1 {
-    padding-left: 6em;
+    padding-left: 2em;
     cursor: pointer;
 }
 
@@ -53,29 +50,65 @@
     color: #000000b9;
     font-weight: 400;
 }
-
+.header-links li.morepages
+{
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    
+    
+    
+}
 .header-links a:hover {
     color: teal;
 }
 
-.morepages,
-.dropdown {
+.morepages,.services
+{
+    position: relative;
+}
+.header-links li.morepages:hover .morepages-links,.services:hover ul.services-list 
+{
+    visibility: visible;
+}
+.header-links ul.morepages-links
+{
+  background-color: #fff ; 
+    width: 10em  ;
+    padding-left: 1em;
+    position: absolute;
+    top: 30px;
+    left: 0;
     display: flex;
-    gap: 2px;
-    align-items: center;
-}
-
-.morepages-list {
+    flex-direction: column;
+    gap: 1em;
     visibility: hidden;
+    transition: 0.5s;
+}
+.services-list {
+  background-color:#fff ; 
+    width: 6em  ;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    position: absolute;
+    top: 0;
+    right: -6.5em;
+    visibility:hidden;
+    transition: 0.5s;
+}
+
+.header-links ul {
+    position: absolute;
 }
 
 
-.header-items span,
+.header-container span,
 .header-links a.active {
     color: teal;
 }
 
-.header-appointment button {
+.header-container button {
     padding-block: 0.5em;
     padding-inline: 1.25em;
     border-radius: 5px;
@@ -87,16 +120,18 @@
 .header-appointment button:hover {
     background-color: #099aa7b7;
 }
-
 .healthcare {
 
     display: flex;
     flex-direction: column;
     gap: 3em;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
     margin-block: 6em;
-    padding-left: 6em;
+    padding-left: 4em;
     padding-bottom: 4em;
-    position: relative;
+
     background: linear-gradient(to right, rgba(0, 128, 128, 0.073), transparent);
 
 }
@@ -111,13 +146,11 @@
     width: fit-content;
     text-transform: uppercase;
     text-align: center;
-    margin-top: 2.5em;
+    
     padding: 0.5em;
     border-radius: 1.25em;
     font-weight: 600;
-    position: absolute;
-    top: 0px;
-    left: 47%;
+    
 
 }
 
@@ -131,6 +164,7 @@
     align-items: center;
     justify-content: center;
     margin-top: 6em;
+    
 
 }
 
@@ -167,13 +201,11 @@
     padding: 0.5em;
     z-index: 1;
     align-items: center;
-    
+
 }
 
 .healthcare-call div.icon-image,
-div.emergency {
-     
-}
+div.emergency {}
 
 
 .emergency {
@@ -224,7 +256,8 @@ div.emergency {
 }
 
 .healthcare-items-history {
-    width: 50%;   
+    width: 50%;
+
 }
 
 .history-content-title {
@@ -289,11 +322,13 @@ div.emergency {
     cursor: pointer;
 }
 
-.watch-video button.watch {
+.history-content-buttons :nth-child(2) {
+    display: flex;
+    gap: 0.5em    ;
     transition: 0.5s;
 }
 
-.watch-video button.watch:hover {
+.history-content-buttons :nth-child(2):hover {
     background-color: teal;
     color: #fff;
 }
@@ -309,12 +344,7 @@ div.emergency {
     box-shadow: -0.5em 0.5em 2em rgba(0, 128, 128, 0.755);
 }
 
-.watch-video {
-    display: flex;
-
-}
-
-.watch {
+ .history-content-buttons :nth-child(2){
     background: white;
     border: 1px solid #ccc;
     width: 12.5em;
@@ -351,13 +381,6 @@ div.emergency {
     color: teal;
 }
 
-.watch-video {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-
-}
 
 .watch-video-icon {
     position: absolute;
@@ -907,13 +930,10 @@ label {
 
 .department {
     width: 30%;
-    padding: 2em;
+    padding: 1em;
     display: flex;
     flex-direction: column;
     gap: 0.5em;
-    flex-wrap: wrap;
-    justify-content: left;
-    justify-items: left;
     transition: 0.5s;
     position: relative;
 }
@@ -1494,32 +1514,35 @@ label {
 
 .footer-links {
     padding-inline: 7.5em;
-    padding-top: 3em;
-    display: flex;
+    padding-top: 1em;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
     gap: 0.5em;
+    
 }
 
 .links {
-    width: 80%;
+    
     display: grid;
     grid-template-columns: repeat(4, 2fr);
-    gap: 2em;
+    gap: 1em;
+    background-color: red;
 
 }
 
-.medinest-contact {
-    width: 20%;
-    margin-right: 6em;
+.medinest-contact ul{
+    
 }
 
 .footer-links ul {
     margin-top: 0.5em;
-    width: 100%;
+    
 
 }
 
 .medinest-contact ul {
     margin-top: 2em;
+    
 }
 
 .footer-links li {
@@ -1567,7 +1590,7 @@ label {
 .footer-social-icons {
     display: flex;
     gap: 0.5em;
-
+    
 }
 
 .footer-social-icons div.image-icon {
@@ -1670,29 +1693,8 @@ label {
     opacity: 0.8;
 }
 
-.more-menu {
-    width: 3em;
-    height: 150;
-    background-color: red;
 
-
-}
-
-.morepages {
-    position: relative;
-
-}
-
-.morepages ul {
-    width: 3em;
-    position: absolute;
-    transform: translateY(2px);
-    background-color: tomato;
-}
-
-.morepages:hover .more-menu {}
-
-.header-appointment div.menue {
+.header-container div.menue {
     width: 2.5em;
     height: 2.5em;
     justify-content: center;
@@ -1702,13 +1704,17 @@ label {
 
 }
 
-@media (max-width:1024px) 
-{
+@media (max-width:1024px) {
+    html {
+        font-size: 14px;
+    }
+
     .header-links {
         display: none;
     }
 
-    .header-items {
+    .header-container{
+width: 100% ;
         display: flex;
         justify-content: space-between;
     }
@@ -1717,7 +1723,7 @@ label {
         display: flex;
     }
 
-    .header-appointment div.menue {
+    .header-container div.menue {
         display: flex;
     }
 
@@ -1748,213 +1754,325 @@ label {
 }
 
 
-@media (max-width:768px) 
-{
-    .healthcare-title
+@media (max-width:768px) {
+
+    html
     {
-        top: 52em;
-        left : 50%;
-        transform: translateX(-50%);
-        z-index: 1;
+        font-size: 15px;
+    }
+    .healthcare {
+        padding-left: 2em;
     }
 
-    .healthcare-items-image 
-    {
+    .header-title h1 {
+        padding-left: 0.5em;
+    }
+
+    .healthcare-title {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        
+    }
+
+    .healthcare-items-image {
         width: 100%;
     }
-    .healthcare-items
-    {
+
+    .healthcare-items {
         display: flex;
         flex-direction: column;
         align-items: start;
         margin-top: 0;
     }
-    
-.history-content-icons {
-    
-    flex-direction: column;
-}
-.history-content-icons div.icon-desc
-{
-    text-align: center;
-}
-.healthcare-links {
-    flex-direction: column;
-    align-items: flex-start;
-}
-.history-content-title
-{
-    
-}
-    .healthcare-call,.treated-rates
-    {
+
+    .history-content-icons {
+
+        flex-direction: column;
+    }
+
+    .history-content-icons div.icon-desc {
+        text-align: center;
+    }
+
+    .healthcare-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .healthcare-call,
+    .treated-rates {
         position: static;
         margin-top: 1em;
     }
+
     .header-links {
         display: none;
     }
 
-    .header-items {
+    .header-container {
         display: flex;
         justify-content: space-between;
+        padding-inline: 1em;
+        
     }
 
     .header-appointment {
         display: flex;
     }
+.history-content-title
+{
+    margin-top: 2em;
+}
+    .healthcare-items-history {
+        width: 100%;
 
-.healthcare-items-history {
-    width: 100%;
-}
-.desc h2
-{
-    font-size: 2.5em;
-}
-.desc div.explain
-{
-    width: 90%;
-}
+    }
+
+    .desc h2 {
+        font-size: 2.5em;
+    }
+
+    .desc div.explain {
+        width: 90%;
+    }
 
     .ex-health-images-content {
-      flex-direction: column;
+        flex-direction: column;
     }
-.ex-health-images {
-    width: 100%;
-flex-direction: column;
-margin-inline: 0;
-    }
-    
-.ex-health-images-part1
-{
-    width: 100%;
-}
-.ex-health-images-part2
-{
-    flex-direction: row;
-    width: 100%;
-}
-.ex-health-content
-{
-    justify-items: center;
-    margin-top: 3em;
-    width: 100%;
-}
-.ex-health-content1
-{
-    width: 90%;
-}
-.ex-health-content4
-{
-    width: 100%;
-    flex-direction: row;
-    justify-content: center;
-    
-}
-.featured-content
-{
-    flex-direction: column;
-}
 
-.featured-content-desc, .featured-content-image,.alldepartments-desc
-{
-    width: 100%;
-}
-.departments
-{
-    margin-left: 2em;
-    
-}
-.department
-{
-    width :45%
-}
-.service-image-content
-{
-    width: 48%;
-}
-.find-doctor-filter form
-{
-    flex-direction: column;
-    
-}
-.find-doctor-filter div.search,div.speciality,div.locations,div.search input,select
-{
-    width: 100%;
-}
-.find-doctor-doctors
-{
-    margin-inline: auto;
-}
+    .ex-health-images {
+        width: 100%;
+        flex-direction: column;
+        margin-inline: 0;
+    }
+
+    .ex-health-images-part1 {
+        width: 100%;
+    }
+
+    .ex-health-images-part2 {
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .ex-health-content {
+        justify-items: center;
+        margin-top: 3em;
+        width: 100%;
+    }
+
+    .ex-health-content1 {
+        width: 90%;
+    }
+
+    .ex-health-content4 {
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+
+    }
+
+    .featured-content {
+        flex-direction: column;
+    }
+
+    .featured-content-desc,
+    .featured-content-image,
+    .alldepartments-desc {
+        width: 100%;
+    }
+
+    .departments {
+        margin-left: 2em;
+
+    }
+
+    .department {
+        width: 45%
+    }
+
+    .service-image-content {
+        width: 48%;
+    }
+
+    .find-doctor-filter form {
+        flex-direction: column;
+
+    }
+
+    .find-doctor-filter div.search,
+    div.speciality,
+    div.locations,
+    div.search input,
+    select {
+        width: 100%;
+    }
+
+    .find-doctor-doctors {
+        margin-inline: auto;
+    }
+
     .dr-info {
         width: 90%;
         margin-inline: auto;
     }
-.health-care
-{
-    padding: 2em;
-}
-.health-care-journey
-{
-    width: 100%;
-    flex-direction: column;
-}
-.health-care-boxs
-{
-    width: 100%;
-    height: 20em;
-}
-.health-care-journey-content
-{
-    width: 100%;
-}
-.health-care-journey-content h2
-    {
+
+    .health-care {
+        padding: 2em;
+    }
+
+    .health-care-journey {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .health-care-boxs {
+        width: 100%;
+        height: 20em;
+    }
+
+    .health-care-journey-content {
+        width: 100%;
+    }
+
+    .health-care-journey-content h2 {
         font-size: 2.1em;
+
+    }
+
+    .health-care-journey-content p {
+        text-align: center;
+    }
+
+    .health-care-history {
+        grid-template-columns: repeat(2, 2fr);
+        gap: 0.5em;
+        margin-block: 2em;
+    }
+
+    .health-care-history div.health-care-rate {
+        margin-block: 1em;
+
+    }
+
+    .health-care-depts {
+        grid-template-columns: repeat(2, 2fr);
+    }
+
+    .health-care-assistance {
+        flex-direction: column;
+        text-align: center;
+        gap: 1em;
+    }
+
+    .find-doctor-filter button {
+        position: static;
+        width: 100%;
+    }
+
+    .footer-links {
+        grid-template-columns: repeat(3, 1fr);
+        padding-inline: 2em;
+    }
+
+    .medinest-contact {
+        width: fit-content;
+    }
+
+    .links {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (width<=425px) {
+
+    html {
+        font-size: 13px;
+    }
+
+
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+    .department {
+        width: 90%
+    }
+
+    .featuredservices-services,
+    .service-image-content {
+        width: 88%;
+    }
+
+    .health-care-depts {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .history-content-buttons {
+        flex-direction: column;
+        
+    }   
+    .history-content-buttons button {
+        text-align: left    ;
+    }
+    .history-content-buttons :nth-child(2) {
+        width: 100%;
+    }
+    .featured-explain p
+    {
+text-align: center;
+    }
+    .featured-content
+    {
+        padding: 0;
+    }
+    .featuredservices-title p
+    {
+        text-align: center;
+    }
+    
+   .featuredservices-services,  .service-image-content
+    {
+        width: 100%;
         
     }
-   .health-care-journey-content p
-   {
-text-align: center;
-   } 
-   .health-care-history
-   {
-    grid-template-columns: repeat(2,2fr);
-    gap :0.5em;
-    margin-block: 2em;
-   }
-   .health-care-history div.health-care-rate
-   {
-    margin-block: 1em;
-    
-   }
-   .health-care-depts
-   {
-    grid-template-columns: repeat(2,2fr);
-   }
-   .health-care-assistance
-   {
-    flex-direction: column;
-    text-align: center;
-    gap :1em;
-   }
-   .find-doctor-filter button {
-    position: static;
-    width: 100%;
-   }
-   .footer-links
-    {
-     padding-inline:2em;   
+    .featuredservices-services {
+margin-inline: 0.5em;
     }
-    .medinest-contact
-    {width:fit-content;}
-.links
-{
-    grid-template-columns: repeat(2,1fr);
+    .health-care-button-link
+    {
+        
+        flex-direction: column;
+        
+        align-items: flex-start;
+        width: 100%;
+    }
+      .health-care-button-link button.brand-color
+  {
+    width: 100%;
+  }
+  .dr-info
+  {
+    width: 100%;
+  }
+  .healthcare-title
+  {
+    width: 60%;
+  }
+.find-doctor-title p {
+    text-align: center;
+}
+.health-care-history {
+    grid-template-columns: repeat(1, 1fr);  
 }
 
+    .footer-links {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2em    ;
+    }
+}
 
-}
-@media (max-width:425px)  {
-    
-}
+@media (max-width:375px) {}
